@@ -1,3 +1,49 @@
 ﻿<section id="section-cliente">
     <h1>Clientes</h1>
+    <table class="table">
+        <thead>
+            <tr>
+                <td>ID</td>
+                <td>Cliente</td>
+                <td>RG</td>
+                <td>Endereço</td>
+                <td>Bairro</td>
+                <td>Cidade</td>
+                <td>CEP</td>
+                <td>Estado</td>
+                <td>País</td>
+                <td>Tel.Res</td>
+                <td>Celular</td>
+                <td>Tel.Com</td>
+                <td>e-Mail</td>
+                <td>Data Nasc.</td>
+                <td>Status</td>
+                <td></td>
+                <td></td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let cliente of clientes">
+                <td>{{ cliente.codigoCliente }}</td>
+                <td>{{ cliente.nomeCliente }}</td>
+                <td>{{ cliente.rg }}</td>
+                <td>{{ cliente.cgc }}</td>
+                <td>{{ cliente.endereco }}</td>
+                <td>{{ cliente.complemento }}</td>
+                <td>{{ cliente.bairro }}</td>
+                <td>{{ cliente.cidade }}</td>
+                <td>{{ cliente.cep }}</td>
+                <td>{{ cliente.estado }}</td>
+                <td>{{ cliente.pais }}</td>
+                <td>{{ cliente.telRes }}</td>
+                <td>{{ cliente.celular }}</td>
+                <td>{{ cliente.telCom }}</td>
+                <td>{{ cliente.email }}</td>
+                <td>{{ cliente.dataNascimento }}</td>
+                <td>{{ cliente.status }}</td>
+                <td><button (click)="edit(cliente)">Editar</button></td>
+                <td><button (click)="delete(cliente)">Deletar</button></td>
+            </tr>
+        </tbody>
+    </table>
 </section>

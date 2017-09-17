@@ -24,6 +24,8 @@
   <ItemGroup>
     <!-- Files not to show in IDE -->
     <None Remove="ClientApp\app\components\cliente\cliente.component.ts" />
+    <None Remove="ClientApp\app\Models\cliente.interface.ts" />
+    <None Remove="ClientApp\app\Services\cliente.service.ts" />
     <None Remove="yarn.lock" />
 
     <!-- Files not to publish (note that the 'dist' subfolders are re-added below) -->
@@ -31,6 +33,8 @@
   </ItemGroup>
   <ItemGroup>
     <TypeScriptCompile Include="ClientApp\app\components\cliente\cliente.component.ts" />
+    <TypeScriptCompile Include="ClientApp\app\Models\cliente.interface.ts" />
+    <TypeScriptCompile Include="ClientApp\app\Services\cliente.service.ts" />
   </ItemGroup>
   <Target Name="RunWebpack" AfterTargets="ComputeFilesToPublish">
     <!-- As part of publishing, ensure the JS resources are freshly built in production mode -->
