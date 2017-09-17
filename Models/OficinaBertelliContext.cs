@@ -15,18 +15,9 @@ namespace OficinaBertelli.Models
         public virtual DbSet<Veiculo> Veiculo { get; set; }
         public virtual DbSet<Vistoria> Vistoria { get; set; }
 
-        //protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        //{
-        //    #warning To protect potentially sensitive information in your connection string, you should move it out of source code. See http://go.microsoft.com/fwlink/?LinkId=723263 for guidance on storing connection strings.
-        //    optionsBuilder.UseSqlServer(@"Data Source=COMPUTADOR;Initial Catalog=OficinaBertelli;Integrated Security=True;");
-        //}
-
         public OficinaBertelliContext(DbContextOptions<OficinaBertelliContext> options)
             :base(options)
-        {
-
-        }
-
+        { }
         
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
